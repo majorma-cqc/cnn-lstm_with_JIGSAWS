@@ -136,7 +136,7 @@ if __name__ == "__main__":
         pre = 0
         while True:
             ret, img = cam.read()
-            if frame_count == 16:
+            if frame_count == 8:
                 grad_conter = grad_conter + 1
                 print(len(clip))
                 ### 为了Grad-CAM绘图，多返回了一个heatmap
@@ -158,7 +158,7 @@ if __name__ == "__main__":
                     (100, 100), font, 1.0, (225, 225, 225), 
                     1, cv2.LINE_AA
                 )
-                cv2.imwrite(f'./grad_cam_pics/grad_{grad_conter}.jpg', superimposed_img)
+                cv2.imwrite(f'./grad_cam_pics/1_frame/grad_{grad_conter}.jpg', superimposed_img)
 
                 # font = cv2.FONT_HERSHEY_SIMPLEX
 
